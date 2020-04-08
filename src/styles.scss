@@ -120,7 +120,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 table {
@@ -136,12 +136,15 @@ table {
 
 html {
   font-size: 62.5%;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 500;
 }
 
 h1 {
   font-size: 2.4rem;
+}
+.removeUnderline{
+  text-decoration: none;
 }
 
 h2 {
@@ -178,6 +181,22 @@ img {
   -webkit-box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
   -moz-box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
   box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
+  .left{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: flex-end;
+  }
+  .seePrice{
+    margin-right: 5%;
+    border: 1px solid rgb(12, 12, 11);
+    height: 23px;
+    width: 60px;
+    border-radius: 8%;
+    &:hover{
+      box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
+    }
+  }
 }
 
 .dark-mode__toggle {
@@ -229,8 +248,8 @@ img {
 .coin__title {
   display: block;
   margin-left: 8px;
-    min-width: 160px;
-text-align: left;
+  min-width: 160px;
+  text-align: left;
 }
 
 .coin__symbol {
@@ -247,7 +266,28 @@ text-align: left;
   background-color: #313843;
 
   .navbar {
-    background-color: #1F2022;
+    background-color: #1f2022;
     border: none;
+  }
+}
+
+.price {
+  margin-top: 2%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 1px solid gray;
+    height: 120px;
+    width: 20%;
+    .logo {
+      width: 100%;
+      .logoImg {
+        width: 50px;
+      }
+    }
   }
 }

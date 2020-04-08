@@ -1,10 +1,10 @@
 import { useLocalStorage } from "./useLocalStorage";
 
 export default function useDarkMode() {
-  const [value, setValue] = useLocalStorage(false);
+  const [darkMode, setDarkMode] = useLocalStorage(false);
   const toggleMode = (e) => {
     e.preventDefault();
-    if (value === true) {
+    if (darkMode === true) {
       var body = document.body;
       body.classList.add("dark-mode");
     } else {
@@ -13,7 +13,7 @@ export default function useDarkMode() {
         ""
       );
     }
-    setValue(!value);
+    setDarkMode(!darkMode);
   };
-  return [value, toggleMode];
+  return [darkMode, toggleMode];
 }
