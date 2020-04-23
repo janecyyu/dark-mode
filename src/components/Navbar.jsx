@@ -14,11 +14,11 @@ const Navbar = () => {
         </h1>
       </div>
       <div className="left">
-        <button className="seePrice">
+        {/* <button className="seePrice">
           <Link to="/price" className="removeUnderline">
-            see price
+            price
           </Link>
-        </button>
+        </button> */}
         <div className="dark-mode__toggle">
           <div
             onClick={toggleMode}

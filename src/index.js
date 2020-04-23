@@ -27,9 +27,6 @@ const App = () => {
         <Route exact path="/">
           <Charts coinData={coinData} />
         </Route>
-        <Route path="/price">
-          <Price priceData={coinData}/>
-        </Route>
       </Router>
     </div>
   );
